@@ -96,7 +96,7 @@ jobs:
     - name: Prepare for upload VHDX to Artifact
       run: |
         mkdir -p ./artifact/VHDX
-        cp -rf $(find /home/runner/work/CBL-Mariner/CBL-Mariner/out/images/core-efi/ -type f "*.vhdx") ./artifact/VHDX
+        cp -rf $(find /home/runner/work/CBL-Mariner/CBL-Mariner/out/images/core-efi/ -name "*.vhdx") ./artifact/VHDX
         
     - name: Upload VHDX to Artifact
       uses: actions/upload-artifact@v2
